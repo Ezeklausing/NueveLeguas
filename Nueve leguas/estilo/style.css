@@ -156,6 +156,12 @@ td {
   padding: 20px;
 }
 
+/*posicionamiento tabla*/
+
+.showsTable {
+  margin: 2rem 2rem 2rem 10rem;
+}
+
 /*estilo texto en footer*/
 
 .footerText {

@@ -156,12 +156,6 @@ td {
   padding: 20px;
 }
 
-/*posicionamiento tabla*/
-
-.showsTable {
-  margin: 2rem 2rem 2rem 10rem;
-}
-
 /*estilo texto en footer*/
 
 .footerText {
@@ -196,7 +190,7 @@ td {
   grid-template-rows: 8rem auto 7rem;
   grid-template-areas:
     "header header"
-    "sidebar contenido"
+    "sidebar content"
     "footer footer";
 }
 
@@ -209,9 +203,11 @@ td {
 }
 
 .grid-item-3 {
-  grid-area: contenido;
+  grid-area: content;
 }
 
 .grid-item-4 {
   grid-area: footer;
 }
+
+/*responsive*/

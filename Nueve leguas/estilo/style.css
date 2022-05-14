@@ -97,6 +97,7 @@ a:active {
   display: grid;
   min-height: 100vh;
   grid-template-columns: 220px 3fr;
+  grid-template-rows: 6rem 1fr 8rem;
   grid-gap: 5px;
   grid-template-areas:
     "header header"
@@ -126,22 +127,16 @@ a:active {
 @media only screen and (max-width: 768px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 4fr;
+    grid-template-rows: 6rem 2fr 2fr 8rem;
     height: 100vh;
-    gap: 15px;
-    align-items: end;
+    gap: 25px;
+    align-items: center;
     justify-items: center;
     grid-template-areas:
       "header"
       "sidebar"
       "content"
       "footer";
-  }
-
-  .sidebar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: medium;
   }
 }

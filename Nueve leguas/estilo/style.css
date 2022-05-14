@@ -91,6 +91,66 @@ a:active {
   margin-left: 5px;
 }
 
+/*estilo al formulario - aplico flex */
+
+.form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form fieldset {
+  border: 3px solid #303030;
+  padding: 3%;
+}
+.form input {
+  background: white;
+  border: 3px solid #303030;
+  border-radius: 5px 5px 5px 5px;
+  color: #303030;
+  font-size: 15px;
+  padding: 5px;
+}
+.form button {
+  font-size: 15px;
+  padding: 5px;
+}
+
+/*estilo a la tabla - espaciado*/
+
+table {
+  table-layout: fixed;
+  width: 80%;
+  border-collapse: collapse;
+  border: 3px solid black;
+  font-size: large;
+  margin: 5rem 20rem 10rem 3rem;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
 /*Aplicando grid*/
 
 .grid-container {

@@ -10,12 +10,15 @@
 /*estilos etiquetas*/
 
 header {
+  background-color: #262626;
   height: 6rem;
   top: 0;
   width: 100%;
 }
 
 footer {
+  background-color: #262626;
+  bottom: 0;
   height: 8rem;
   bottom: 0;
   width: 100%;
@@ -55,8 +58,8 @@ a:active {
 /*navlist /sidebar*/
 
 .sidebar {
-  left: 0;
-  width: 220px;
+  background-color: #a6a6a6;
+  width: 250px;
   border-radius: 5px;
 }
 
@@ -64,7 +67,8 @@ a:active {
   display: flex;
   flex-direction: column;
   line-height: 4.5rem;
-  padding-left: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 1.5rem;
   font-size: 1.5rem;
 }
 
@@ -72,7 +76,7 @@ a:active {
 
 .sidebar ul li a:hover {
   border-left: 4px solid #0d0d0d;
-  transition: 0.5s;
+  transition: 1s;
   background: #303030;
   counter-reset: black;
 }
@@ -150,53 +154,64 @@ th,
 td {
   padding: 20px;
 }
+/* contenedor flex e items*/
 
-/*Aplicando grid*/
+.container-flex {
+  display: flex;
+  flex-direction: row;
+}
 
-.grid-container {
+.flex-item__1 {
+  margin: 1rem 0.5rem 1rem 0;
+}
+
+.flex-item__2 {
+  margin: 1rem 0.5rem 1rem 0;
+}
+
+/*contenedor grid*/
+
+.container-grid {
   display: grid;
-  min-height: 100vh;
-  grid-template-columns: 220px 3fr;
-  grid-template-rows: 6rem 1fr 8rem;
-  grid-gap: 5px;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
-    "header header"
-    "sidebar content"
-    "footer footer";
+    "guitar a guitar b"
+    "drums a drums b"
+    "bass a bass b";
 }
 
-.grid-item-1 {
-  grid-area: header;
-  background-color: #262626;
+.guitar {
+  grid-area: guitar a;
+}
+.guitar-item {
+  grid-area: guitar b;
+}
+.drums {
+  grid-area: drums a;
 }
 
-.grid-item-2 {
-  grid-area: sidebar;
-  background-color: #a6a6a6;
+.drums-item {
+  grid-area: drums b;
 }
 
-.grid-item-3 {
-  grid-area: content;
+.bass {
+  grid-area: bass a;
 }
 
-.grid-item-4 {
-  grid-area: footer;
-  background-color: #262626;
+.bass-item {
+  grid-area: bass b;
 }
 
-@media only screen and (max-width: 768px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: 4fr;
-    grid-template-rows: 6rem 2fr 2fr 8rem;
-    height: 100vh;
-    gap: 25px;
-    align-items: center;
-    justify-items: center;
-    grid-template-areas:
-      "header"
-      "sidebar"
-      "content"
-      "footer";
-  }
+/*Estilos seccion miembros*/
+
+.membersP {
+  font-size: x-large;
+  text-align: justify;
+  margin: 2rem;
+}
+
+.membersImg {
+  border: #262626;
+  border-radius: 5px;
 }

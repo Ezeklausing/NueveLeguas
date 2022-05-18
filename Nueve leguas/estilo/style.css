@@ -60,7 +60,7 @@ a:active {
 .sidebar {
   background-color: #a6a6a6;
   width: 250px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .sidebar ul li a {
@@ -213,5 +213,9 @@ td {
 
 .membersImg {
   border: #262626;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+
+.carousel-inner {
+  border-radius: 10px;
 }

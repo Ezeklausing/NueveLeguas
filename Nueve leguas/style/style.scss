@@ -4,11 +4,11 @@
   margin: 0%;
   text-decoration: none;
   list-style: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*estilos etiquetas*/
+
 body {
   font-family: "Ubuntu", sans-serif;
   background-image: url("/Nueve leguas/img/fondoR.jpg");
@@ -52,6 +52,7 @@ svg {
 }
 
 /*estilo texto en footer*/
+
 .footerText {
   font-weight: 500;
   font-size: 1rem;
@@ -61,6 +62,7 @@ svg {
 }
 
 /*estilo titulos*/
+
 h1 {
   color: antiquewhite;
   font-family: "Ubuntu", sans-serif;
@@ -79,25 +81,20 @@ a:active {
 }
 
 /*navlist /sidebar*/
+
 nav {
   height: 100%;
   width: 250px;
   background-color: #a6a6a6;
   border-radius: 10px;
 }
-
 nav ul {
   padding-left: 0;
 }
 
 nav ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   line-height: 4.5rem;
   padding-left: 0.2rem;
   padding-right: 1.5rem;
@@ -105,16 +102,17 @@ nav ul li a {
 }
 
 /*transicion-Seleccion sidebar*/
+
 nav ul li a:hover {
   border-left: 10px solid #303030;
-  -webkit-transition: 0.6s;
   transition: 0.6s;
   background: #303030;
-  counter-reset: black 230, 8, 8;
+  counter-reset: black (230, 8, 8);
   border-radius: 10px;
 }
 
 /*estilo parrafo biografia*/
+
 .biography {
   font-size: x-large;
   text-align: left;
@@ -124,11 +122,13 @@ nav ul li a:hover {
 }
 
 /*estilo al formulario*/
+
 .form-check-label {
   color: antiquewhite;
 }
 
 /*estilo a la tabla - espaciado*/
+
 table {
   table-layout: fixed;
   width: 80%;
@@ -160,16 +160,11 @@ th,
 td {
   padding: 20px;
 }
-
 /* contenedor flex e items*/
+
 .container-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .flex-item__1 {
@@ -181,53 +176,41 @@ td {
 }
 
 /*contenedor grid*/
+
 .container-grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 2fr;
-      grid-template-columns: 2fr 2fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: "guitar guitarb" "drums drumsb" "bass bassb";
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "guitar guitarb"
+    "drums drumsb"
+    "bass bassb";
 }
 
 .guitar {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: guitar;
 }
-
 .guitar-item {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: guitarb;
 }
-
 .drums {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: drums;
 }
 
 .drums-item {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: drumsb;
 }
 
 .bass {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: bass;
 }
 
 .bass-item {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
   grid-area: bassb;
 }
 
 /*Estilos seccion miembros*/
+
 .membersP {
   font-size: x-large;
   text-align: justify;
@@ -245,16 +228,11 @@ td {
 }
 
 /*Redes Estilo*/
+
 .redes-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  justify-content: right;
+  align-items: baseline;
   justify-items: center;
   margin-top: 1rem;
 }
@@ -275,31 +253,24 @@ td {
   border-radius: 5px;
   line-height: 50px;
   font-size: 18px;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.2s;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
   transition: 0.2s;
 }
-
 .redes-container ul:hover a {
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
+  filter: blur(2px);
 }
 
 .redes-container ul li a:hover {
-  -webkit-transform: translateY(-3px) scale(1.05);
-          transform: translateY(-3px) scale(1.05);
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
-  -webkit-filter: none;
-          filter: none;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
+  filter: none;
 }
 
 /*media queries*/
+
 @media (max-width: 576px) {
   nav {
     display: block;
     width: 90%;
   }
 }
-/*# sourceMappingURL=style.css.map */

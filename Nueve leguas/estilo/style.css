@@ -96,18 +96,18 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   line-height: 4.5rem;
-  padding-left: 0.5rem;
+  padding-left: 0.2rem;
   padding-right: 1.5rem;
   font-size: 1.5rem;
 }
 
-/*transicion- seleccion sidebar*/
+/*transicion-Seleccion sidebar*/
 
 nav ul li a:hover {
-  border-left: 6px solid #0d0d0d;
-  transition: 1s;
+  border-left: 10px solid #303030;
+  transition: 0.6s;
   background: #303030;
-  counter-reset: black;
+  counter-reset: black (230, 8, 8);
   border-radius: 10px;
 }
 
@@ -264,4 +264,13 @@ td {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
   filter: none;
+}
+
+/*media queries*/
+
+@media (max-width: 576px) {
+  nav {
+    display: block;
+    width: 90%;
+  }
 }

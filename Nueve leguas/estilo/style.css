@@ -2,8 +2,6 @@
 * {
   padding: 0%;
   margin: 0%;
-  text-decoration: none;
-  list-style: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -12,11 +10,11 @@
 body {
   font-family: "Ubuntu", sans-serif;
   background-image: url("/Nueve leguas/img/fondoR.jpg");
+  font-size: 16px;
 }
 
 header {
-  /* background-color: #262626; */
-  height: 6rem;
+  height: 6em;
   top: 0;
   width: 100%;
 }
@@ -26,15 +24,17 @@ main {
 }
 
 footer {
-  height: 8rem;
-  /* background-color: #262626; */
+  height: 8em;
   bottom: 0;
   width: 100%;
-  padding-top: 1rem;
+  padding-top: 1em;
 }
 
 img {
   max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 img,
@@ -43,8 +43,8 @@ svg {
 }
 
 .container {
-  min-width: 100%;
-  margin: 0 auto;
+  max-width: 95%;
+  margin: 0rem auto;
 }
 
 .col {
@@ -54,7 +54,7 @@ svg {
 /*estilo texto en footer*/
 .footerText {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1em;
   color: antiquewhite;
   text-align: right;
   padding: 2rem;
@@ -64,7 +64,7 @@ svg {
 h1 {
   color: antiquewhite;
   font-family: "Ubuntu", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.5em;
   padding-top: 1.5rem;
   padding-left: 1.5rem;
 }
@@ -78,30 +78,30 @@ a:active {
   text-decoration: none;
 }
 
-/*navlist /sidebar*/
+/*sidebar*/
 nav {
   height: 100%;
-  width: 200px;
+  width: 12.5em;
   background-color: #a6a6a6;
   border-radius: 10px;
 }
 
 nav ul {
-  padding-left: 0;
+  padding-left: 0em;
 }
 
 nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  line-height: 4.5rem;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  line-height: 5.5rem;
   padding-left: 1rem;
   padding-right: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 /*transicion-Seleccion sidebar*/
@@ -116,11 +116,11 @@ nav ul li a:hover {
 
 /*estilo parrafo biografia*/
 .biography {
-  font-size: x-large;
+  font-size: 1em;
   text-align: left;
   color: antiquewhite;
-  margin-left: 5px;
-  margin-top: 3px;
+  margin-left: 0.31rem;
+  margin-top: 0.19rem;
 }
 
 /*estilo al formulario*/
@@ -134,7 +134,7 @@ table {
   width: 80%;
   border-collapse: collapse;
   border: 3px solid silver;
-  font-size: large;
+  font-size: 1.5em;
   color: antiquewhite;
   text-align: center;
   margin: 5rem 20rem 10rem 3rem;
@@ -158,7 +158,7 @@ thead th:nth-child(4) {
 
 th,
 td {
-  padding: 20px;
+  padding: 1.25em;
 }
 
 /* contenedor flex e items*/
@@ -173,11 +173,11 @@ td {
 }
 
 .flex-item__1 {
-  margin: 1rem 0.5rem 1rem 0;
+  margin: 1em 0.5em 1em 0;
 }
 
 .flex-item__2 {
-  margin: 1rem 0.5rem 1rem 0;
+  margin: 1em 0.5em 1em 0;
 }
 
 /*contenedor grid*/
@@ -229,7 +229,7 @@ td {
 
 /*Estilos seccion miembros*/
 .membersP {
-  font-size: x-large;
+  font-size: 1.5em;
   text-align: justify;
   color: antiquewhite;
   margin: 2rem;
@@ -261,20 +261,20 @@ td {
 
 .redes-container ul li {
   display: inline-block;
-  margin: 0 5px;
-  width: 50px;
-  height: 50px;
+  margin: 0 0.31rem;
+  width: 3.12rem;
+  height: 3.12rem;
   text-align: center;
 }
 
 .redes-container ul li a {
   display: block;
-  padding: 0 10px;
+  padding: 0 0.63rem;
   background: #a6a6a6;
   color: #303030;
   border-radius: 5px;
-  line-height: 50px;
-  font-size: 18px;
+  line-height: 3.13rem;
+  font-size: 1.13em;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.2s;
@@ -287,19 +287,19 @@ td {
 }
 
 .redes-container ul li a:hover {
-  -webkit-transform: translateY(-3px) scale(1.05);
-          transform: translateY(-3px) scale(1.05);
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateY(-0.1875em) scale(1.05);
+          transform: translateY(-0.1875em) scale(1.05);
+  -webkit-box-shadow: 0px 5px 4.5px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 4.5px 0px rgba(0, 0, 0, 0.4);
   -webkit-filter: none;
           filter: none;
 }
 
 /*media queries*/
 @media (max-width: 576px) {
-  nav {
-    display: block;
-    width: 90%;
+  .container-flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 /*# sourceMappingURL=style.css.map */

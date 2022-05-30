@@ -1,0 +1,43 @@
+/*estilos etiquetas*/ /*grid areas*/
+body {
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  background-image: url("/Nueve leguas/img/fondoR.jpg");
+  font-size: 16px;
+}
+
+header {
+  grid-area: head;
+  height: 6em;
+  top: 0;
+  width: 100%;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  min-height: 100vh;
+}
+
+main {
+  grid-area: mid;
+  min-height: 100vh;
+}
+
+footer {
+  grid-area: bottom;
+  height: 8em;
+  bottom: 0;
+  width: 100%;
+  padding-top: 1em;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}

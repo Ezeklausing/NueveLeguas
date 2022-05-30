@@ -1,28 +1,11 @@
+@import "generales";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
 * {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
   list-style: none;
-}
-
-/*estilos etiquetas*/
-
-body {
-  font-family: "Ubuntu", sans-serif;
-  background-image: url("/Nueve leguas/img/fondoR.jpg");
-  font-size: 16px;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-img,
-svg {
-  vertical-align: middle;
 }
 
 .container {
@@ -38,31 +21,6 @@ svg {
     "sidebar mid"
     "bottom bottom";
 }
-/*grid areas*/
-header {
-  grid-area: head;
-  height: 6em;
-  top: 0;
-  width: 100%;
-}
-
-.sidebar {
-  grid-area: sidebar;
-  min-height: 100vh;
-}
-
-main {
-  grid-area: mid;
-  min-height: 100vh;
-}
-
-footer {
-  grid-area: bottom;
-  height: 8em;
-  bottom: 0;
-  width: 100%;
-  padding-top: 1em;
-}
 
 /*contenedor flex miembros*/
 
@@ -70,11 +28,10 @@ footer {
   display: flex;
   justify-content: space-between;
   flex: 1;
-}
-
-.container-flex-members__item {
-  display: flex;
-  margin: 1em 0.5em 1em 0;
+  .container-flex-members__item {
+    display: flex;
+    margin: 1em 0.5em 1em 0;
+  }
 }
 
 /*estilos*/
@@ -91,8 +48,11 @@ footer {
 
 /*estilo titulos*/
 
+/*variable*/
+$titulo: antiquewhite;
+
 h1 {
-  color: antiquewhite;
+  color: $titulo;
   font-family: "Ubuntu", sans-serif;
   font-size: 2.5em;
   padding-top: 1.5rem;
@@ -108,7 +68,7 @@ a:active {
   text-decoration: none;
 }
 
-/*sidebar*/
+/*nav / sidebar*/
 
 nav {
   height: 100%;
@@ -135,7 +95,6 @@ nav ul li a:hover {
   border-left: 10px solid #303030;
   transition: 0.6s;
   background: #303030;
-  counter-reset: black (230, 8, 8);
   border-radius: 10px;
 }
 
@@ -166,27 +125,25 @@ table {
   color: antiquewhite;
   text-align: center;
   margin: 5rem 20rem 10rem 3rem;
-}
+  thead th:nth-child(1) {
+    width: 30%;
+  }
 
-thead th:nth-child(1) {
-  width: 30%;
-}
+  thead th:nth-child(2) {
+    width: 20%;
+  }
 
-thead th:nth-child(2) {
-  width: 20%;
-}
+  thead th:nth-child(3) {
+    width: 15%;
+  }
 
-thead th:nth-child(3) {
-  width: 15%;
-}
-
-thead th:nth-child(4) {
-  width: 35%;
-}
-
-th,
-td {
-  padding: 1.25em;
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  th,
+  td {
+    padding: 1.25em;
+  }
 }
 
 /*Estilos seccion miembros*/
@@ -215,42 +172,47 @@ td {
   align-items: baseline;
   justify-items: center;
   margin-top: 1rem;
+  ul li {
+    display: inline-block;
+    margin: 0.31rem;
+    width: 3.12rem;
+    height: 3.12rem;
+    text-align: center;
+    a {
+      display: block;
+      padding: 0 0.63rem;
+      background: #a6a6a6;
+      color: #303030;
+      border-radius: 5px;
+      line-height: 3.13rem;
+      font-size: 1.13em;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+      transition: 0.2s;
+    }
+  }
 }
 
-.redes-container ul li {
-  display: inline-block;
-  margin: 0.31rem;
-  width: 3.12rem;
-  height: 3.12rem;
-  text-align: center;
-}
-
-.redes-container ul li a {
-  display: block;
-  padding: 0 0.63rem;
-  background: #a6a6a6;
-  color: #303030;
-  border-radius: 5px;
-  line-height: 3.13rem;
-  font-size: 1.13em;
-  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
-  transition: 0.2s;
-}
-.redes-container ul:hover a {
+.redes-container .redes-container ul li .redes-container ul:hover a {
   filter: blur(2px);
 }
 
-.redes-container ul li a:hover {
-  transform: translateY(-0.1875em) scale(1.05);
-  box-shadow: 0px 5px 4.5px 0px rgba(0, 0, 0, 0.4);
-  filter: none;
+.redes-container {
+  ul {
+    li {
+      a:hover {
+        transform: translateY(-0.1875em) scale(1.05);
+        box-shadow: 0px 5px 4.5px 0px rgba(0, 0, 0, 0.4);
+        filter: none;
+      }
+    }
+  }
 }
 
 /*media queries*/
 
 @media (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 13px;
   }
   .container-flex-members {
     flex-wrap: wrap;
@@ -261,6 +223,18 @@ td {
   body {
     font-size: 10px;
   }
+
+  .container {
+    grid-gap: 15px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "head"
+      "sidebar"
+      "mid"
+      "bottom";
+  }
+
   .container-flex-members {
     flex-wrap: wrap;
   }

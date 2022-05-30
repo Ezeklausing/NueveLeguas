@@ -15,11 +15,11 @@
     <title>NueveLeguas Banda</title>
   </head>
   <body>
-    <header>
-      <h1 class="titulo">Miembros</h1>
-    </header>
-    <div class="container-flex">
-      <aside class="flex-item__1 sidebar">
+    <div class="container">
+      <header>
+        <h1 class="titulo">Miembros</h1>
+      </header>
+      <div class="sidebar">
         <nav>
           <ul>
             <li><a href="../index.html">Inicio</a></li>
@@ -29,21 +29,19 @@
             <li><a href="./contacto.html">Contacto</a></li>
           </ul>
         </nav>
-      </aside>
-      <main class="flex-item__2">
-        <div class="container-grid">
-          <div class="guitar">
+      </div>
+      <main>
+        <div class="container-flex-members">
+          <div class="container-flex-members__item membersImg">
             <figure>
               <img
                 src="../img/guitar 2.jpg"
                 alt="foto guitarrista bio"
-                height="400px"
-                width="600px"
                 class="membersImg"
               />
             </figure>
           </div>
-          <div class="guitar-item membersP">
+          <div class="container-flex-members__item membersP">
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
               eum aliquam ipsum, dolor expedita quam dignissimos placeat?
@@ -51,7 +49,9 @@
               eaque impedit, odit sit!
             </p>
           </div>
-          <div class="drums membersP">
+        </div>
+        <div class="container-flex-members">
+          <div class="container-flex-members__item membersP">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
               doloremque ipsum. Voluptates modi eum maxime recusandae harum
@@ -59,29 +59,27 @@
               aspernatur, quas natus eum possimus.
             </p>
           </div>
-          <div class="drums-item">
+          <div class="container-flex-members__item membersImg">
             <figure>
               <img
                 src="../img/drummer.jpg"
                 alt="foto baterista bio"
-                height="400px"
-                width="600px"
                 class="membersImg"
               />
             </figure>
           </div>
-          <div class="bass">
+        </div>
+        <div class="container-flex-members">
+          <div class="container-flex-members__item membersImg">
             <figure>
               <img
                 src="../img/bassist.jpg"
                 alt="foto bajista bio"
-                height="400px"
-                width="600px"
                 class="membersImg"
               />
             </figure>
           </div>
-          <div class="bass-item membersP">
+          <div class="container-flex-members__item membersP">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab
               exercitationem aspernatur earum corrupti, fugiat ipsum id
@@ -91,25 +89,26 @@
           </div>
         </div>
       </main>
+      <!--footer-->
+      <footer>
+        <div class="redes-container">
+          <ul>
+            <li>
+              <a href="a" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="a" class="instagram"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="a" class="twitter"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="a" class="twitter"><i class="fab fa-soundcloud"></i></a>
+            </li>
+          </ul>
+          <h2 class="footerText">Ezequiel Klausing // 2022</h2>
+        </div>
+      </footer>
     </div>
-    <footer>
-      <div class="redes-container">
-        <ul>
-          <li>
-            <a href="a" class="facebook"><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href="a" class="instagram"><i class="fab fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href="a" class="twitter"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="a" class="twitter"><i class="fab fa-soundcloud"></i></a>
-          </li>
-        </ul>
-        <h2 class="footerText">Ezequiel Klausing // 2022</h2>
-      </div>
-    </footer>
   </body>
 </html>

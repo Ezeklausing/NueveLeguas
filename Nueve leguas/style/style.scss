@@ -3,6 +3,7 @@
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
+  list-style: none;
 }
 
 /*estilos etiquetas*/
@@ -11,23 +12,6 @@ body {
   font-family: "Ubuntu", sans-serif;
   background-image: url("/Nueve leguas/img/fondoR.jpg");
   font-size: 16px;
-}
-
-header {
-  height: 6em;
-  top: 0;
-  width: 100%;
-}
-
-main {
-  min-height: 100vh;
-}
-
-footer {
-  height: 8em;
-  bottom: 0;
-  width: 100%;
-  padding-top: 1em;
 }
 
 img {
@@ -42,13 +26,58 @@ svg {
 }
 
 .container {
-  max-width: 95%;
-  margin: 0rem auto;
+  width: 95%;
+  max-width: 1400px;
+  margin: 1.25em auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "head head"
+    "sidebar mid"
+    "bottom bottom";
 }
-
-.col {
+/*grid areas*/
+header {
+  grid-area: head;
+  height: 6em;
+  top: 0;
   width: 100%;
 }
+
+.sidebar {
+  grid-area: sidebar;
+  min-height: 100vh;
+}
+
+main {
+  grid-area: mid;
+  min-height: 100vh;
+}
+
+footer {
+  grid-area: bottom;
+  height: 8em;
+  bottom: 0;
+  width: 100%;
+  padding-top: 1em;
+}
+
+/*contenedor flex miembros*/
+
+.container-flex-members {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.container-flex-members__item {
+  display: flex;
+  margin: 1em 0.5em 1em 0;
+}
+
+/*estilos*/
 
 /*estilo texto en footer*/
 
@@ -113,7 +142,7 @@ nav ul li a:hover {
 /*estilo parrafo biografia*/
 
 .biography {
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: left;
   color: antiquewhite;
   margin-left: 0.31rem;
@@ -159,54 +188,6 @@ th,
 td {
   padding: 1.25em;
 }
-/* contenedor flex e items*/
-
-.container-flex {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-item__1 {
-  margin: 1em 0.5em 1em 0;
-}
-
-.flex-item__2 {
-  margin: 1em 0.5em 1em 0;
-}
-
-/*contenedor grid*/
-
-.container-grid {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    "guitar guitarb"
-    "drums drumsb"
-    "bass bassb";
-}
-
-.guitar {
-  grid-area: guitar;
-}
-.guitar-item {
-  grid-area: guitarb;
-}
-.drums {
-  grid-area: drums;
-}
-
-.drums-item {
-  grid-area: drumsb;
-}
-
-.bass {
-  grid-area: bass;
-}
-
-.bass-item {
-  grid-area: bassb;
-}
 
 /*Estilos seccion miembros*/
 
@@ -238,7 +219,7 @@ td {
 
 .redes-container ul li {
   display: inline-block;
-  margin: 0 0.31rem;
+  margin: 0.31rem;
   width: 3.12rem;
   height: 3.12rem;
   text-align: center;
@@ -266,8 +247,21 @@ td {
 }
 
 /*media queries*/
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .container-flex-members {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 576px) {
-  .container-flex {
+  body {
+    font-size: 10px;
+  }
+  .container-flex-members {
     flex-wrap: wrap;
   }
 }

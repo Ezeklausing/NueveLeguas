@@ -4,7 +4,7 @@
 body {
   height: 100%;
   font-family: "Ubuntu", sans-serif;
-  background-image: url("/Nueve leguas/img/fondoR.jpg");
+  background-image: url("../img/fondoR.jpg");
   font-size: 16px;
 }
 

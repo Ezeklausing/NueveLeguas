@@ -1,0 +1,33 @@
+@mixin bordes {
+  border-radius: 10px;
+}
+
+@mixin sizes($widht, $height) {
+  width: $widht;
+  height: $height;
+}
+
+:root {
+  --facebook: #3b5999;
+  --instagram: #e4405f;
+  --twitter: #55acee;
+  --soundcloud: #ff7700;
+}
+
+$titulo: antiquewhite;
+
+%areas {
+  grid-gap: 15px;
+  grid-template-columns: auto, auto;
+  grid-template-rows: auto;
+}
+
+$colors: (
+  "primary": #303030,
+  "secondary": #a6a6a6,
+  "text": antiquewhite,
+);
+
+@function color($search) {
+  @return map-get($colors, $search);
+}

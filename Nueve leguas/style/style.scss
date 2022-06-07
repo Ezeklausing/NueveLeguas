@@ -1,4 +1,5 @@
 @import "generales";
+@import "operaciones";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
 * {
@@ -13,9 +14,7 @@
   max-width: 1400px;
   margin: 1.25em auto;
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  @extend %areas;
   grid-template-areas:
     "head head"
     "sidebar mid"
@@ -41,15 +40,12 @@
 .footerText {
   font-weight: 500;
   font-size: 1em;
-  color: antiquewhite;
+  color: color("text");
   text-align: right;
   padding: 2rem;
 }
 
 /*estilo titulos*/
-
-/*variable*/
-$titulo: antiquewhite;
 
 h1 {
   color: $titulo;
@@ -73,8 +69,8 @@ a:active {
 nav {
   height: 100%;
   width: 12.5em;
-  background-color: #a6a6a6;
-  border-radius: 10px;
+  background-color: color("secondary");
+  @include bordes;
 }
 nav ul {
   padding-left: 0em;
@@ -92,10 +88,10 @@ nav ul li a {
 /*transicion-Seleccion sidebar*/
 
 nav ul li a:hover {
-  border-left: 10px solid #303030;
+  border-left: 10px solid color("primary");
   transition: 0.6s;
-  background: #303030;
-  border-radius: 10px;
+  background: color("primary");
+  @include bordes;
 }
 
 /*estilo parrafo biografia*/
@@ -103,47 +99,9 @@ nav ul li a:hover {
 .biography {
   font-size: 1.5em;
   text-align: left;
-  color: antiquewhite;
+  color: color("text");
   margin-left: 0.31rem;
   margin-top: 0.19rem;
-}
-
-/*estilo al formulario*/
-
-.form-check-label {
-  color: antiquewhite;
-}
-
-/*estilo a la tabla - espaciado*/
-
-table {
-  table-layout: fixed;
-  width: 80%;
-  border-collapse: collapse;
-  border: 3px solid silver;
-  font-size: 1.5em;
-  color: antiquewhite;
-  text-align: center;
-  margin: 5rem 20rem 10rem 3rem;
-  thead th:nth-child(1) {
-    width: 30%;
-  }
-
-  thead th:nth-child(2) {
-    width: 20%;
-  }
-
-  thead th:nth-child(3) {
-    width: 15%;
-  }
-
-  thead th:nth-child(4) {
-    width: 35%;
-  }
-  th,
-  td {
-    padding: 1.25em;
-  }
 }
 
 /*Estilos seccion miembros*/
@@ -151,17 +109,17 @@ table {
 .membersP {
   font-size: 1.5em;
   text-align: justify;
-  color: antiquewhite;
+  color: color("text");
   margin: 2rem;
 }
 
 .membersImg {
-  border: #262626;
-  border-radius: 10px;
+  border: color("primary");
+  @include bordes;
 }
 
 .carousel-inner {
-  border-radius: 10px;
+  @include bordes;
 }
 
 /*Redes Estilo*/
@@ -175,14 +133,13 @@ table {
   ul li {
     display: inline-block;
     margin: 0.31rem;
-    width: 3.12rem;
-    height: 3.12rem;
+    @include sizes(3.12rem, 3.12rem);
     text-align: center;
     a {
       display: block;
       padding: 0 0.63rem;
-      background: #a6a6a6;
-      color: #303030;
+      background: color("secondary");
+      color: color("primary");
       border-radius: 5px;
       line-height: 3.13rem;
       font-size: 1.13em;
@@ -204,6 +161,18 @@ table {
         box-shadow: 0px 5px 4.5px 0px rgba(0, 0, 0, 0.4);
         filter: none;
       }
+      .facebook:hover {
+        background: var(--facebook);
+      }
+      .instagram:hover {
+        background: var(--instagram);
+      }
+      .twitter:hover {
+        background: var(--twitter);
+      }
+      .soundcloud:hover {
+        background: var(--soundcloud);
+      }
     }
   }
 }
@@ -222,6 +191,20 @@ table {
 @media (max-width: 576px) {
   body {
     font-size: 10px;
+  }
+  header {
+    grid-area: head;
+  }
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  main {
+    grid-area: mid;
+  }
+
+  footer {
+    grid-area: bottom;
   }
 
   .container {

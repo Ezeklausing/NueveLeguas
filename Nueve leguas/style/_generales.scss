@@ -1,6 +1,21 @@
 /*estilos etiquetas*/ /*grid areas*/
-body {
+@import "operaciones";
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/*Grid areas*/
+
+html {
   height: 100%;
+}
+
+body {
+  min-height: 100%;
   font-family: "Ubuntu", sans-serif;
   background-image: url("../img/fondoR.jpg");
   font-size: 16px;
@@ -8,29 +23,38 @@ body {
 
 header {
   grid-area: head;
-  height: 6em;
   top: 0;
-  width: 100%;
 }
 
-.sidebar {
+nav {
   grid-area: sidebar;
-  min-height: 100vh;
 }
 
 main {
   grid-area: mid;
-  min-height: 100vh;
-  min-width: 100%;
 }
 
 footer {
   grid-area: bottom;
-  height: 8em;
   bottom: 0;
-  width: 100%;
   padding-top: 1em;
 }
+
+/*Grid container*/
+
+.container {
+  display: grid;
+  width: 95%;
+  max-width: 1400px;
+  margin: 1.25em auto;
+  @extend %areas;
+  grid-template-areas:
+    "head head"
+    "sidebar mid"
+    "bottom bottom";
+}
+
+/*Imagenes*/
 
 img {
   max-width: 100%;
@@ -41,4 +65,30 @@ img {
 img,
 svg {
   vertical-align: middle;
+}
+
+/*estilo texto footer*/
+.footerText {
+  font-weight: 500;
+  font-size: 1em;
+  color: color("text");
+  text-align: right;
+  padding: 2rem;
+}
+
+/*estilo titulos*/
+
+h1 {
+  color: $titulo;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3em;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  color: $titulo;
+  font-size: 2em;
+  margin-bottom: 1.5em;
 }

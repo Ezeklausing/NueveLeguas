@@ -34,28 +34,37 @@
       <header>
         <h1>Contacto</h1>
       </header>
-      <div class="sidebar">
-        <nav>
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./biografia.html">Biografia</a></li>
-            <li><a href="./miembros.html">Miembros</a></li>
-            <li><a href="./shows.html">Shows</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
+      <!--Sidebar-->
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./biografia.html">Biografia</a></li>
+          <li><a href="./miembros.html">Miembros</a></li>
+          <li><a href="./shows.html">Shows</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
       <main>
         <!--Form-->
         <section>
           <form class="row g-3">
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" />
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail4"
+                placeholder="Correo"
+              />
             </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="inputPassword4" />
+              <input
+                type="password"
+                class="form-control"
+                id="inputPassword4"
+                placeholder="Password"
+              />
             </div>
             <div class="col-12">
               <label for="inputAddress" class="form-label">Direccion</label>
@@ -63,7 +72,7 @@
                 type="text"
                 class="form-control"
                 id="inputAddress"
-                placeholder="1234 Main St"
+                placeholder="Direccion"
               />
             </div>
             <div class="col-12">
@@ -72,12 +81,17 @@
                 type="text"
                 class="form-control"
                 id="inputAddress2"
-                placeholder="Apartment, studio, or floor"
+                placeholder="Depto, Piso, Casa"
               />
             </div>
             <div class="col-md-6">
               <label for="inputCity" class="form-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCity" />
+              <input
+                type="text"
+                class="form-control"
+                id="inputCity"
+                placeholder="Ciudad"
+              />
             </div>
             <div class="col-md-4">
               <label for="inputState" class="form-label">Estado</label>
@@ -88,16 +102,24 @@
             </div>
             <div class="col-md-2">
               <label for="inputZip" class="form-label">Cp</label>
-              <input type="text" class="form-control" id="inputZip" />
+              <input
+                type="text"
+                class="form-control"
+                id="inputZip"
+                placeholder="Cp"
+              />
             </div>
             <div class="col-12">
               <div class="form-check">
                 <input
-                  class="form-check-input"
+                  class="form-check-input form form-control-sm"
                   type="checkbox"
                   id="gridCheck"
                 />
-                <label class="form-check-label text-white" for="gridCheck">
+                <label
+                  class="form-check-label text-white form-control-lg"
+                  for="gridCheck"
+                >
                   Recibir Newsletter
                 </label>
               </div>

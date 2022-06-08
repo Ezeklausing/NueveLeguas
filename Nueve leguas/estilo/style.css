@@ -1,61 +1,6 @@
 /*estilos etiquetas*/
 /*grid areas*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
-body {
-  height: 100%;
-  font-family: "Ubuntu", sans-serif;
-  background-image: url("../img/fondoR.jpg");
-  font-size: 16px;
-}
-
-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: head;
-  height: 6em;
-  top: 0;
-  width: 100%;
-}
-
-.sidebar {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: sidebar;
-  min-height: 100vh;
-}
-
-main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: mid;
-  min-height: 100vh;
-  min-width: 100%;
-}
-
-footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: bottom;
-  height: 8em;
-  bottom: 0;
-  width: 100%;
-  padding-top: 1em;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-img,
-svg {
-  vertical-align: middle;
-}
-
 :root {
   --facebook: #3b5999;
   --instagram: #e4405f;
@@ -79,13 +24,108 @@ svg {
   list-style: none;
 }
 
+/*Grid areas*/
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  background-image: url("../img/fondoR.jpg");
+  font-size: 16px;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: head;
+  top: 0;
+}
+
+nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: mid;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: bottom;
+  bottom: 0;
+  padding-top: 1em;
+}
+
+/*Grid container*/
 .container {
+  display: -ms-grid;
+  display: grid;
   width: 95%;
   max-width: 1400px;
   margin: 1.25em auto;
-  display: -ms-grid;
-  display: grid;
       grid-template-areas: "head head" "sidebar mid" "bottom bottom";
+}
+
+/*Imagenes*/
+img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+/*estilo texto footer*/
+.footerText {
+  font-weight: 500;
+  font-size: 1em;
+  color: antiquewhite;
+  text-align: right;
+  padding: 2rem;
+}
+
+/*estilo titulos*/
+h1 {
+  color: antiquewhite;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3em;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  color: antiquewhite;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+:root {
+  --facebook: #3b5999;
+  --instagram: #e4405f;
+  --twitter: #55acee;
+  --soundcloud: #ff7700;
+}
+
+.container {
+  grid-gap: 15px;
+  -ms-grid-columns: auto, auto;
+      grid-template-columns: auto, auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
 }
 
 /*contenedor flex miembros*/
@@ -110,30 +150,6 @@ svg {
 
 /*estilos*/
 /*estilo texto en footer*/
-.footerText {
-  font-weight: 500;
-  font-size: 1em;
-  color: antiquewhite;
-  text-align: right;
-  padding: 2rem;
-}
-
-/*estilo titulos*/
-h1 {
-  color: antiquewhite;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2.5em;
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-h2 {
-  font-family: "Ubuntu", sans-serif;
-  color: antiquewhite;
-  font-size: 2em;
-  margin-bottom: 1.5em;
-}
-
 /*elimiar subrayados*/
 a:link,
 a:visited,
@@ -145,51 +161,53 @@ a:active {
 
 /*nav / sidebar*/
 nav {
-  height: 100%;
-  width: 12.5em;
+  width: 11.5em;
   background-color: #a6a6a6;
   border-radius: 10px;
 }
 
 nav ul {
-  padding-left: 0em;
-}
-
-nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  line-height: 5.5rem;
-  padding-left: 1rem;
-  padding-right: 1.5rem;
-  font-size: 1.5em;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 0;
 }
 
-/*transicion-Seleccion sidebar*/
-nav ul li a:hover {
+nav ul li {
+  line-height: 4.5em;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  font-size: 1.7em;
+}
+
+nav ul li a {
+  padding-left: 0.4em;
+}
+
+nav ul li:hover {
+  border-radius: 10px;
+  width: 100%;
   border-left: 10px solid #303030;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   background: #303030;
-  border-radius: 10px;
 }
 
 /*estilo parrafo biografia*/
 .biography {
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-align: left;
   color: antiquewhite;
-  margin-left: 0.31rem;
   margin-top: 0.19rem;
 }
 
 /*Estilos seccion miembros*/
 .membersP {
-  font-size: 1.5em;
+  font-size: 1.6em;
   text-align: justify;
   color: antiquewhite;
   margin: 2rem;
@@ -280,6 +298,9 @@ nav ul li a:hover {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  h2 {
+    margin-top: 0.2em;
+  }
 }
 
 @media (max-width: 576px) {
@@ -307,16 +328,49 @@ nav ul li a:hover {
     grid-area: bottom;
   }
   .container {
-    grid-gap: 15px;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    grid-gap: 20px;
         grid-template-areas: "head" "sidebar" "mid" "bottom";
   }
   .container-flex-members {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  h1 {
+    font-size: 4em;
+    margin-bottom: 1em;
+  }
+  h2 {
+    margin-top: 1em;
+    font-size: 3em;
+  }
+  .biography {
+    font-size: 2.5em;
+  }
+  .membersP {
+    font-size: 2.3em;
+  }
+  nav {
+    background-color: #a6a6a6;
+    width: 100%;
+    height: auto;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-bottom: 0;
+  }
+  nav ul li {
+    padding: 1em 0.2em 1em 0.2em;
+    line-height: 3em;
+    font-size: 1.5em;
+  }
+  nav ul li a {
+    font-size: 1.4em;
   }
 }
 /*# sourceMappingURL=style.css.map */

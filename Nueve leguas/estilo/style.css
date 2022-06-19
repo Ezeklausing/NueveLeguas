@@ -274,15 +274,16 @@ footer {
 .grid-container-gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
-  grid-gap: 0.7em;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  grid-gap: 0.5em;
 }
 
 .grid-container-gallery img {
   width: 100%;
+  border-radius: 10px;
 }
 
 /*estilo parrafo biografia*/

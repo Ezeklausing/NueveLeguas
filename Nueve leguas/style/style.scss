@@ -84,13 +84,14 @@ footer {
 
 .grid-container-gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 0.7em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 0.5em;
 }
 
 .grid-container-gallery img {
   width: 100%;
+  @include bordes;
 }
 
 /*estilo parrafo biografia*/

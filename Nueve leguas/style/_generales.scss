@@ -1,57 +1,34 @@
-/*estilos etiquetas*/ /*grid areas*/
 @import "operaciones";
 
-* {
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-  list-style: none;
-}
-
-/*Grid areas*/
-
-html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-  font-family: "Ubuntu", sans-serif;
-  background-image: url("../img/fondoR.jpg");
-  font-size: 16px;
-}
-
-header {
-  grid-area: head;
-  top: 0;
-}
-
+/*nav / sidebar*/
 nav {
-  grid-area: sidebar;
+  width: 11.5em;
+  // background-color: color("secondary");
+  @include bordes;
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    li {
+      color: aqua;
+      line-height: 4.5em;
+      padding-left: 1rem;
+      padding-right: 1.5rem;
+      font-size: 1.7em;
+
+      a {
+        font-size: 1em;
+        padding-left: 0.4em;
+      }
+    }
+  }
 }
 
-main {
-  grid-area: mid;
-}
-
-footer {
-  grid-area: bottom;
-  bottom: 0;
-  padding-top: 1em;
-}
-
-/*Grid container*/
-
-.container {
-  display: grid;
-  width: 95%;
-  max-width: 1400px;
-  margin: 1.25em auto;
-  @extend %areas;
-  grid-template-areas:
-    "head head"
-    "sidebar mid"
-    "bottom bottom";
+nav ul li:hover {
+  @include bordes;
+  width: 100%;
+  border-left: 10px solid transparent;
+  transition: 0.8s;
 }
 
 /*Imagenes*/
@@ -82,6 +59,8 @@ h1 {
   color: $titulo;
   font-family: "Ubuntu", sans-serif;
   font-size: 3em;
+  line-height: 1em;
+  letter-spacing: 20px;
   padding-top: 1.5rem;
   padding-left: 1.5rem;
 }
@@ -90,5 +69,62 @@ h2 {
   font-family: "Ubuntu", sans-serif;
   color: $titulo;
   font-size: 2em;
-  margin-bottom: 1.5em;
+  letter-spacing: 5px;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+/*Redes Estilo*/
+
+.redes-container {
+  display: flex;
+  justify-content: right;
+  align-items: baseline;
+  justify-items: center;
+  margin-top: 1rem;
+  ul li {
+    display: inline-block;
+    margin: 0.31rem;
+    @include sizes(3.12rem, 3.12rem);
+    text-align: center;
+    a {
+      display: block;
+      padding: 0 0.63rem;
+      background: color("secondary");
+      color: color("primary");
+      border-radius: 5px;
+      line-height: 3.13rem;
+      font-size: 1.13em;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+      transition: 0.2s;
+    }
+  }
+}
+
+.redes-container .redes-container ul li .redes-container ul:hover a {
+  filter: blur(2px);
+}
+
+.redes-container {
+  ul {
+    li {
+      a:hover {
+        transform: translateY(-0.1875em) scale(1.05);
+        box-shadow: 0px 5px 4.5px 0px rgba(0, 0, 0, 0.4);
+        filter: none;
+      }
+      .facebook:hover {
+        background: var(--facebook);
+      }
+      .instagram:hover {
+        background: var(--instagram);
+      }
+      .twitter:hover {
+        background: var(--twitter);
+      }
+      .soundcloud:hover {
+        background: var(--soundcloud);
+      }
+    }
+  }
 }

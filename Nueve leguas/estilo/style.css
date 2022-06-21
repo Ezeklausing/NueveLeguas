@@ -227,6 +227,20 @@ body {
   margin: 1em 0.5em 1em 0;
 }
 
+/*contenedor logos marcas*/
+.container-flex-brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  justify-items: center;
+}
+
 /*Grid areas*/
 header {
   -ms-grid-row: 1;
@@ -353,9 +367,16 @@ footer {
   }
   .grid-container {
     grid-gap: 10px;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    -ms-grid-rows: auto auto 1fr auto;
+        grid-template-rows: auto auto 1fr auto;
         grid-template-areas: "head" "sidebar" "mid" "bottom";
+  }
+  .grid-container-gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0.9em;
   }
   .container-flex-members {
     -ms-flex-wrap: wrap;
@@ -403,7 +424,7 @@ footer {
     font-size: 1.5em;
   }
   nav ul li a {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   nav ul li:hover {
     border-radius: 10px;

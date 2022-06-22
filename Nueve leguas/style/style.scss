@@ -43,6 +43,10 @@ body {
   }
 }
 
+table {
+  font-size: 1.3em;
+}
+
 /*contenedor logos marcas*/
 
 .container-flex-brands {
@@ -50,6 +54,10 @@ body {
   justify-content: space-between;
   align-items: baseline;
   justify-items: center;
+}
+
+.container-flex-band {
+  display: flex;
 }
 
 /*Grid areas*/
@@ -144,6 +152,9 @@ footer {
   h2 {
     margin-top: 0.2em;
   }
+  table {
+    font-size: 1.6em;
+  }
 }
 
 /*Mobile*/
@@ -207,6 +218,9 @@ footer {
   }
   .footerText {
     font-size: 1.4em;
+  }
+  table {
+    font-size: 1.8em;
   }
 
   nav {

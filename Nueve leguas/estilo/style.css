@@ -227,6 +227,10 @@ body {
   margin: 1em 0.5em 1em 0;
 }
 
+table {
+  font-size: 1.3em;
+}
+
 /*contenedor logos marcas*/
 .container-flex-brands {
   display: -webkit-box;
@@ -239,6 +243,12 @@ body {
       -ms-flex-align: baseline;
           align-items: baseline;
   justify-items: center;
+}
+
+.container-flex-band {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*Grid areas*/
@@ -338,6 +348,9 @@ footer {
   h2 {
     margin-top: 0.2em;
   }
+  table {
+    font-size: 1.6em;
+  }
 }
 
 /*Mobile*/
@@ -399,6 +412,9 @@ footer {
   }
   .footerText {
     font-size: 1.4em;
+  }
+  table {
+    font-size: 1.8em;
   }
   nav {
     width: 100%;

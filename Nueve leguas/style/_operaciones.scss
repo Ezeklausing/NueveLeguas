@@ -1,6 +1,9 @@
 @mixin bordes {
   border-radius: 10px;
 }
+@mixin sombras {
+  box-shadow: 10px 7px 16px -1px rgba(0, 0, 0, 0.64);
+}
 
 @mixin sizes($widht, $height) {
   width: $widht;

@@ -26,6 +26,7 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../estilo/style.css" />
     <title>NueveLeguas Banda | Galeria</title>
   </head>
@@ -50,16 +51,37 @@
           <img
             src="../img/tinified/aliane-schwartzhaupt-QdmUva6qBTk-unsplash.jpg"
             alt=""
+            data-aos="flip-up"
           />
-          <img src="../img/tinified/band1.jpg" alt="" />
-          <img src="../img/tinified/band2.jpg" alt="" />
-          <img src="../img/tinified/bass1.jpg" alt="" />
-          <img src="../img/tinified/bass2.jpg" alt="" />
-          <img src="../img/tinified/crowd1.jpg" alt="" />
-          <img src="../img/tinified/crowd2.jpg" alt="" />
-          <img src="../img/tinified/guitar 2.jpg" alt="" />
-          <img src="../img/tinified/guitar 3.jpg" alt="" />
-          <img src="../img/tinified/guitar1.jpg" alt="" />
+          <img
+            src="../img/tinified/band1.jpg"
+            data-aos="fade-down-right"
+            alt=""
+          />
+          <img
+            src="../img/tinified/band2.jpg"
+            data-aos="fade-down-left"
+            alt=""
+          />
+          <img src="../img/tinified/bass1.jpg" data-aos="flip-down" alt="" />
+          <img src="../img/tinified/bass2.jpg" data-aos="flip-up" alt="" />
+          <img
+            src="../img/tinified/crowd1.jpg"
+            data-aos="zoom-in-down"
+            alt=""
+          />
+          <img
+            src="../img/tinified/crowd2.jpg"
+            data-aos="zoom-in-down"
+            alt=""
+          />
+          <img
+            src="../img/tinified/guitar 2.jpg"
+            data-aos="zoom-in-up"
+            alt=""
+          />
+          <img src="../img/tinified/guitar 3.jpg" data-aos="flip-up" alt="" />
+          <img src="../img/tinified/guitar1.jpg" data-aos="flip-down" alt="" />
         </div>
       </main>
       <footer>
@@ -96,5 +118,12 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: "ease-out-back",
+        duration: 1500,
+      });
+    </script>
   </body>
 </html>

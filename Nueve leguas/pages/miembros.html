@@ -26,6 +26,7 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../estilo/style.css" />
     <title>NueveLeguas Banda | Miembros</title>
   </head>
@@ -53,6 +54,7 @@
                 src="../img/guitar 2.jpg"
                 alt="foto guitarrista bio"
                 class="membersImg membersImg-shadow"
+                data-aos="fade-right"
               />
             </figure>
           </div>
@@ -85,6 +87,7 @@
                 src="../img/drummer.jpg"
                 alt="foto baterista bio"
                 class="membersImg membersImg-shadow"
+                data-aos="fade-left"
               />
             </figure>
           </div>
@@ -97,6 +100,7 @@
                 src="../img/bassist.jpg"
                 alt="foto bajista bio"
                 class="membersImg membersImg-shadow"
+                data-aos="fade-right"
               />
             </figure>
           </div>
@@ -188,5 +192,12 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: "ease-out-back",
+        duration: 1000,
+      });
+    </script>
   </body>
 </html>
